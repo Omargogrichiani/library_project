@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>წიგნების სია</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1e3a8a;
+        }
+
+        .books {
+            max-width: 600px;
+            margin: 30px auto;
+        }
+
+        .book {
+            background: white;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px #00000015;
+        }
+
+        .book h2 {
+            color: #2563eb;
+        }
+
+        a {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            padding: 10px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+        }
+
+        a:hover {
+            background: #1e40af;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>ჩემი ბიბლიოთეკა</h1>
+
+    <div class="books">
+        {% for book in books %}
+            <div class="book">
+                <h2>{{ book.title }}</h2>
+                <p>გვერდების რაოდენობა: {{ book.pages }}</p>
+
+                {% if book.pages > 300 %}
+                    <p>ეს გრძელი წიგნია.</p>
+                {% else %}
+                    <p>ეს მოკლე წიგნია.</p>
+                {% endif %}
+            </div>
+        {% endfor %}
+
+        <a href="/">მთავარ გვერდზე დაბრუნება</a>
+    </div>
+
+</body>
+</html>

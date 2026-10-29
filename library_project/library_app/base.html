@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ჩემი ბიბლიოთეკა</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            color: #243247;
+        }
+
+        header {
+            background-color: #183153;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 25px;
+            background-color: white;
+            border-radius: 12px;
+        }
+
+        a {
+            display: inline-block;
+            background-color: #2878d0;
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-top: 10px;
+        }
+
+        a:hover {
+            background-color: #185ca5;
+        }
+
+        li {
+            margin-bottom: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>ჩემი ბიბლიოთეკა</h1>
+        <p>აღმოაჩინე საინტერესო წიგნები</p>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+</body>
+</html>
